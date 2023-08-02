@@ -1,0 +1,44 @@
+{
+    "name": "jumamiller/laravel-report-query-builder",
+    "description": "Laravel query and report builder",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "excel",
+        "pdf",
+        "report",
+        "excel report",
+        "pdf report"
+    ],
+    "authors": [
+        {
+            "name": "Miller Juma",
+            "email": "miller@solutech.co.ke"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "illuminate/support": "*",
+        "maatwebsite/excel": "^3.1",
+        "league/csv": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JumaMiller\\MadiLib\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JumaMiller\\MadiLib\\ServiceProvider"
+            ],
+            "aliases": {
+                "PdfReport": "JumaMiller\\MadiLib\\ReportGenerator\\Facades\\PdfReportFacade",
+                "ExcelReport": "JumaMiller\\MadiLib\\ReportGenerator\\Facades\\ExcelReportFacade",
+                "CSVReport": "JumaMiller\\MadiLib\\ReportGenerator\\Facades\\CSVReportFacade::class"
+            }
+        }
+    },
+    "minimum-stability": "dev"
+}
